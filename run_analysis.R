@@ -47,3 +47,6 @@ train_set <- cbind(train_set, train_activities)
 #Merge by subject
 #merge(test_set, train_set, by="Subject")
 combined_data <- rbind(test_set, train_set)
+means <- combined_data[,grepl("[Mm]ean", names(combined_data))]
+stds <- combined_data[,grepl("[Ss]td", names(combined_data))]
+cleaned_data<-cbind(combined_data$Subject, combined_data$Activity_Name, means, stds)
