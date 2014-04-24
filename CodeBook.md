@@ -105,7 +105,7 @@ train_set <- cbind(train_set, train_activities)
 ```
 
 
-******************** Combining data into cleaned set ********************
+************** Combine Data **************
 
 
 combined_data - Used to merge the test and training sets together
@@ -134,6 +134,8 @@ cleaned_data - merge together a clean set of the just Subjects, Activities and d
 ```{r}
 cleaned_data<-cbind(subjects, activities, means, stds)
 ```
+
+************** Group by Activities and Subjects **************
 
 Activity_Subject_Averages - A tidy subject of data that groups Activities and Subjects and then displays the mean for each column.
 ```{r}
