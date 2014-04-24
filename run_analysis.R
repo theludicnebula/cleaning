@@ -10,7 +10,7 @@ features <- read.table("UCI HAR Dataset//features.txt")
 subject_test<- read.table("UCI HAR Dataset//test//subject_test.txt")
 x_test<- read.table("UCI HAR Dataset//test//X_test.txt")
 y_test<- read.table("UCI HAR Dataset//test//Y_test.txt")
-body_acc_x_test <- read.table("UCI HAR Dataset//test//Inertial Signals//body_acc_x_test.txt")
+
 
 #build test 
 names(x_test) <- features[,2]
