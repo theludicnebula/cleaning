@@ -1,15 +1,6 @@
-#x_test <- read.table("UCI HAR Dataset\\test\\X_test.txt")
-#y_test <- read.table("UCI HAR Dataset\\test\\Y_test.txt")
-#subject_test <- read.table("UCI HAR Dataset\\test\\subject_test.txt")
-#head(y_test)
 library("plyr")
 
 #download file
-
-testfiles <- list.files("UCI HAR Dataset/test/", pattern=("txt$"), recursive=TRUE)
-testfiles <- testfiles[!is.na(testfiles)]
-trainfiles <-list.files("UCI HAR Dataset/train/", pattern=("txt$"), recursive=TRUE)
-testfiles <- trainfiles[!is.na(trainfiles)]
 
 #Global
 activity_labels <- read.table("UCI HAR Dataset//activity_labels.txt")
@@ -35,8 +26,8 @@ test_set <- cbind(test_set, test_activities)
 subject_train<- read.table("UCI HAR Dataset//train//subject_train.txt")
 x_train<- read.table("UCI HAR Dataset//train//X_train.txt")
 y_train<- read.table("UCI HAR Dataset//train//Y_train.txt")
-#build Train
 
+#build Train
 names(x_train) <- features[,2]
 train_set <- subject_train
 names(train_set) <- c("Subject")
